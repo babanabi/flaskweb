@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block one %}
+
+<style>
+    .colortext{
+        color: rgb(56, 54, 51);
+    }
+    .textstyle{
+      background-color: rgb(238,238,238);
+      padding: 2.5rem;
+      box-shadow: 2px 2px 10px 3px rgb(225,225,225);
+    }
+    .reviews .review .head-review img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0, .25);
+    }
+</style>
+  <br>
+  <br>
+
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p>ABOUT OUR TEAM</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+       The Burnt Orange LLC<cite title="Source Title"></cite>
+    </figcaption>
+  </figure>
+  <br>
+
+  <div class="container colortext">
+    <h6><b>Who are we?</b> - "BurntOrange LLC" is a company that provides photography, graphic design and video visual services with its talented and experienced staff. We are located in the state of South Carolina with more than 6 years of experience in this industry. </h6>
+    
+    <ul>
+        <li><b> Photo services:</b>  We do wedding-shower, pre-wedding, wedding, reception, birthday party, graduation, baby shower, and mini sessions.</li>
+        <li><b>Videography services:</b> Love Story, wedding, parties and events, advertising video, infographic, video cv, short promotional videos.</li>
+        <li><b>Graphic Design:</b> business identity, brochure, catalog, social media materials, poster, roll-up banner, etc.</li>
+    </ul>    
+    </h6>Customer satisfaction is paramount to us. We do everything we do with love and professionalism. We are proud to serve you. Touching people's lives, documenting their happy moments, immortalizing their memories. This is everything.</h6>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="reviews">
+        <div class="review">
+            <div class="head-review">
+                <img src="static/about_photo/baba.jpg" 
+                width="">
+            </div>
+            <div class="body-review"> 
+                <div class="namve-review text-center">Baba Nabi</div>
+                <div class="place-review text-center">Photographer & Videographer</div>
+                <div class="desc-review">I have 8 years of photography and video experience. 
+                    I did my first 4 years of experience shooting weddings. 
+                    My 4 years of experience is in documentary filmmaking. I would be happy to document your happy moments
+                </div>
+            
+        </div>
+        </div>
+        <div class="review">
+            <div class="head-review">
+                <img src="static/about_photo/Sara.jpeg" 
+                width="">
+            </div>
+            <div class="body-review"> 
+                <div class="namve-review text-center">Sara Nabi</div>
+                <div class="place-review text-center">Sales Director</div>
+                <div class="desc-review">I have more then 5 years of experience as a customer representative.  
+                    I do my best in determining discount rates and pricing plans, handling and 
+                    resolving service-related customer complaints.           
+                </div>
+            </div>
+        </div>
+        
+        
+        </div>
+    </div>
+
+
+
+{% endblock %}

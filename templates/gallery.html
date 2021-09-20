@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% block one %}
+
+<style>
+  /** single post **/
+.posts-main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.posts-main-container > div{
+    box-shadow: 0px 8px 22px -12px rgba(0, 0, 0, 0.64);
+}
+.post-img{
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+}
+.category-name{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+.business .category-name{
+    background: #00a7ea;
+}
+.culture .category-name{
+    background: #f03250;
+}
+.politics .category-name{
+    background: #f0544f;
+}
+.finance .category-name{
+    background: #2c2a4a;
+}
+.sports .category-name{
+    background: #a1e44d;
+}
+
+
+.post-content{
+    padding: 25px;
+}
+.post-content-top{
+    background: #00a7ea;
+    color: #fff;
+    opacity: 0.8;
+    padding: 5px 0 5px 15px;
+}
+.post-content-top span{
+    padding-right: 20px;
+}
+.post-content-top .fa-comment, .post-content-top .fa-calendar{
+    padding-right: 5px;
+}
+.post-content h2{
+    font-size: 22px;
+    padding: 12px 0;
+    font-weight: 400;
+}
+.post-content p{
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.read-btn{
+    border: none;
+    padding: 8px 15px;
+    display: block;
+    margin: 5px auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #013eaf;
+    background: transparent;
+    margin-bottom: 25px;
+}
+
+.read-btn:hover{
+    background: #f6f6f6;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width: 1170px){
+    .posts-main-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 768px){
+    .posts-main-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn{
+  position: relative;
+  left: 170px;
+  margin-bottom: 25px;
+  color: #00a7ea;
+}
+
+.post-content .textsty{
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
+  color: #00a7ea;
+  
+}
+
+</style>
+
+
+
+<div class = "posts-collect container">
+  <div class = "posts-main-container">
+      
+  <!-- single post -->
+  <div class = "all business">
+    <div class = "post-img">
+        <img class="post-img" src = "static/gallery/newborn/1.jpg" alt = "">
+        <span class = "category-name">newborn</span>
+    </div>
+
+    <div class = "post-content container">
+        <div class = "post-content-top">
+            <span><i class = "fas fa-calendar"></i>March 16, 2021</span>
+            <span>
+                <i class = "fas fa-camera">  11</i>
+            </span>
+        </div>
+    
+        <h2 class="text-center textsty">WELCOME LITTLE ONE </h2>
+    </div>
+    <a href="{{url_for('album1_page')}}"><button type="button" class="btn btn-outline-primary">See All</button></a>
+</div>
+<!-- end of single post -->
+<!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+      <img class="post-img" src = "static/gallery/birthday_party1/5.jpg" alt = "">
+      <span class = "category-name">birthday</span>
+  </div>
+
+  <div class = "post-content container">
+      <div class = "post-content-top">
+          <span><i class = "fas fa-calendar"></i>August 09, 2020</span>
+          <span>
+              <i class = "fas fa-camera">  9</i>
+          </span>
+      </div>
+      <h2 class="text-center textsty">HAPPY 1'ST BIRTHDAY</h2>
+  </div>
+  <a href="{{url_for('album2_page')}}"><button type = "button" class="btn btn-outline-primary">See All</button></a>
+</div>
+<!-- end of single post -->      
+<!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+      <img class="post-img" src = "static/gallery/lovestory1/10.jpg" alt = "">
+      <span class = "category-name">sunset</span>
+  </div>
+
+  <div class = "post-content container">
+      <div class = "post-content-top">
+          <span><i class = "fas fa-calendar"></i>July 09, 2019</span>
+          <span>
+              <i class = "fas fa-camera">  9</i>
+          </span>
+      </div>
+      <h2 class="text-center textsty">LOVE IN THE SUNSET</h2>
+  </div>
+  <a href="{{url_for('album3_page')}}"><button type = "button" class = "btn btn-outline-primary">See All</button></a>
+</div>
+<!-- end of single post -->    
+<!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+      <img class="post-img" src = "static/wedphoto/5.jpg" alt = "">
+      <span class = "category-name">birthday</span>
+  </div>
+
+  <div class = "post-content container">
+      <div class = "post-content-top">
+          <span><i class = "fas fa-calendar"></i>July 05, 2021</span>
+          <span>
+              <i class = "fas fa-camera">  6</i>
+          </span>
+      </div>
+      <h2 class="text-center textsty">CHEERS TO THE BIRTHDAY BOY</h2>
+  </div>
+  <a href="{{url_for('album4_page')}}"><button type = "button" class = "btn btn-outline-primary">See All </button></a>
+</div>
+<!-- end of single post -->
+<!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+    <img class="post-img" src = "static/gallery/lovestory_2/3.JPG" alt = "">
+    <span class = "category-name">authentic</span>
+  </div>
+  
+  <div class = "post-content container">
+    <div class = "post-content-top">
+        <span><i class = "fas fa-calendar"></i>August 07, 2020</span>
+        <span>
+            <i class = "fas fa-camera">  7</i>
+        </span>
+    </div>
+    <h2 class="text-center textsty">AUTHENTIC LOVE</h2>
+  </div>
+  <a href="{{url_for('album7_page')}}"><button type = "button" class = "btn btn-outline-primary">See All</button></a>
+  </div>
+  <!-- end of single post -->
+<!-- single post -->
+<div class = "all business">
+<div class = "post-img">
+  <img class="post-img" src = "static/gallery/birthday_party3/4.jpg" alt = "">
+  <span class = "category-name">birthday</span>
+</div>
+
+<div class = "post-content container">
+  <div class = "post-content-top">
+      <span><i class = "fas fa-calendar"></i>January 01, 2019</span>
+      <span>
+          <i class = "fas fa-camera">  9</i>
+      </span>
+  </div>
+  <h2 class="text-center textsty">THE STORY OF BIRTHDAY GIRL</h2>
+</div>
+<a href="{{url_for('album6_page')}}"><button type = "button" class = "btn btn-outline-primary">See All</button></a>
+</div>
+<!-- end of single post -->
+<!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+      <img class="post-img" src = "static/gallery/birthday_party2/4.jpg" alt = "">
+      <span class = "category-name">birthday</span>
+  </div>
+  
+  <div class = "post-content container">
+      <div class = "post-content-top">
+          <span><i class = "fas fa-calendar"></i>July 11, 2021</span>
+          <span>
+              <i class = "fas fa-camera">  10</i>
+          </span>
+      </div>
+      <h2 class="text-center textsty">MR ONE DERFUL</h2>
+  </div>
+    <a href="{{url_for('album5_page')}}"><button type = "button" class = "btn btn-outline-primary">See All</button></a>
+  </div>
+  <!-- end of single post -->
+  <!-- single post -->
+<div class = "all business">
+  <div class = "post-img">
+    <img class="post-img" src = "static/gallery/museum_walk/7.jpg" alt = "">
+    <span class = "category-name">mini session</span>
+  </div>
+  
+  <div class = "post-content container">
+    <div class = "post-content-top">
+        <span><i class = "fas fa-calendar"></i>October 16, 2020</span>
+        <span>
+            <i class = "fas fa-camera">  10</i>
+        </span>
+    </div>
+    <h2 class="text-center textsty">AUTUMN IN THE  MUSEUM</h2>
+  </div>
+  <a href="{{url_for('album8_page')}}"><button type = "button" class = "btn btn-outline-primary">See All</button></a>
+  </div>
+  <!-- end of single post -->
+          
+          
+
+  
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+

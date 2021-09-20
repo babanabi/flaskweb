@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block one %}
+
+
+
+<br>
+<br>
+<figure class="text-center">
+    <blockquote class="blockquote">
+      <p>TELL ME ABOUT YOUR SPECIAL DAY</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+        +1 929 434 05 31    <cite title="Source Title"></cite>:   +1 929 434 4662
+    </figcaption>
+</figure>
+
+<br>
+<br>
+
+    <div class="container">
+        <div class='text-center'>
+            <form method="POST">
+                    {{ form.hidden_tag() }}
+                <div class="mb-3">
+                    {% if form.fullname.errors %}
+                        {{form.fullname(class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.fullname.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.fullname(placeholder="Full name" , class="form-control")}}
+                    {% endif %}
+
+
+                    
+                </div>
+                <div class="mb-3">
+                    {% if form.email.errors %}
+                        {{form.email(class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.email(placeholder="Email", class="form-control")}}
+                    {% endif %}
+                    
+                </div>
+                <div class="mb-3">
+                    {% if form.source.errors %}
+                        {{form.source(class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.source.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.source(placeholder="Where did you find me?" , class="form-control")}}
+                    {% endif %}
+                    
+                </div>
+                <div class="mb-3">
+                    {% if form.budget.errors %}
+                        {{form.budget(class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.budget.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.budget(placeholder="Your approximate budget that you want to spend?", class="form-control")}}
+                    {% endif %}
+                    
+                </div>
+                <div class="mb-3">
+                    {% if form.text.errors %}
+                        {{form.text(class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.text.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.text(placeholder="Tell me a little bit about your wedding day plans? Your wedding venue and location?", class="form-control")}}
+                    {% endif %}
+                    
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    {{form.submit(class="btn btn-outline-secondary")}}
+                </div>
+        </div>          
+    </div>
+
+{% endblock %}
+

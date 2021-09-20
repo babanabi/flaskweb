@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+}
+
+/* .container{
+    display: grid;
+    justify-content: center;
+} */
+
+.photoloc{
+    position: absolute;
+    top: 1598px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.photoloc1{
+    position: absolute;
+    top: 1965px;
+    left: 440px;
+    bottom: 0px;
+}
+
+.photoloc2{
+    position: absolute;
+    top: 1965px;
+    left: 880px;
+    bottom: 0px;
+}
+.photoloc3{
+    position: absolute;
+    top: 2263px;
+    left: 0px;
+    bottom: 0px;
+}
+
+
